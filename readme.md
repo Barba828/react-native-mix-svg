@@ -4,8 +4,8 @@
 ```
 │
 └─ assets ─
-            │─ SVG
-                  │─ *.svg
+         │─ SVG
+               │─ *.svg
 ```
 ### 2.node运行脚本执行xml->string转换
 ```shell
@@ -22,8 +22,8 @@ export default class SvgDemo extends Component {
   render () {
     return (
       <View>
-        <Svg icon={'UFO.SVG'} size="200" color={} style={} />
-        <Svg icon={require('./react-native-mix-svg/assets/SVG/UFO.SVG.svg')} />
+        <Svg icon="timer" size="200" color={} style={} />
+        <Svg icon={require('./react-native-mix-svg/assets/SVG/ufo.svg')} />
         <Svg icon={{ uri: 'http://thenewcode.com/assets/images/thumbnails/homer-simpson.svg' }} />
       </View>
     );

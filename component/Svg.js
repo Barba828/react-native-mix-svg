@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Platform } from 'react-native'
+import { Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import SvgUri from '../lib/react-native-svg-uri/index';
 import svgs from '../assets/svgs';
 
 export default class MixSvg extends Component {
-  render () {
+  render() {
     const { icon, color, size, style } = this.props;
     if (typeof icon === 'string') {
       //string，从js文件里读取xml文本
@@ -21,12 +21,12 @@ export default class MixSvg extends Component {
           fill={color}
           style={style}
         />
-      )
+      );
     } else if (typeof icon === 'object' || typeof icon === 'number') {
       //object，读取uri文件
       //number，读取require文件
       if (Platform.OS === 'android') {
-        throw new Error(`*.svg is only for ios.Please use PropTypes.string`);
+        throw new Error('*.svg is only for ios.Please use PropTypes.string');
       }
       return (
         <SvgUri
@@ -36,9 +36,8 @@ export default class MixSvg extends Component {
           fill={color}
           style={style}
         />
-      )
-    };
-
+      );
+    }
   }
 }
 
@@ -53,10 +52,7 @@ MixSvg.propTypes = {
   icon: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
-    PropTypes.number,
+    PropTypes.number
   ]).isRequired,
-  size: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string
-  ])
+  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 };
