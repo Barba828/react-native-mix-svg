@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { Platform } from 'react-native';
+import React, {Component} from 'react';
+import {Platform} from 'react-native';
 import PropTypes from 'prop-types';
 import SvgUri from '../lib/react-native-svg-uri/index';
 import svgs from '../assets/svgs';
 
 export default class MixSvg extends Component {
   render() {
-    const { icon, color, size, style } = this.props;
+    const {icon, color, size, style} = this.props;
     if (typeof icon === 'string') {
       //string，从js文件里读取xml文本
       let svgXmlData = svgs[icon];
@@ -42,7 +42,7 @@ export default class MixSvg extends Component {
 }
 
 MixSvg.defaultProps = {
-  size: 30
+  size: 30,
 };
 
 /**
@@ -52,7 +52,7 @@ MixSvg.propTypes = {
   icon: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
-    PropTypes.number
+    PropTypes.number,
   ]).isRequired,
-  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
