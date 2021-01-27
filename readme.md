@@ -27,16 +27,20 @@ export default class SvgDemo extends Component {
 
 ### 参数
 
-| 属性  |           简介            |
-| ----- | :-----------------------: |
-| icon  | 图标名称（\*.svg 文件名） |
-| size  |         图标大小          |
-| color |           颜色            |
-| style |           样式            |
+| 属性  |            简介             |
+| ----- | :-------------------------: |
+| icon  | 图标名称（即`*.svg`文件名） |
+| size  |          图标大小           |
+| color |            颜色             |
+| style |            样式             |
 
 ## 使用
 
-1. 克隆项目到本地
+1. 克隆项目到本地项目中
+
+```sh
+https://github.com/Barba828/react-native-svg-icon.git
+```
 
 2. 安装 svg 支持
 
@@ -48,7 +52,7 @@ npm install react-native-svg --save
 
 ## 新增 SVG 图标
 
-1. 将\*.svg 文件至于 react-native-mix-svg/assets/SVG 文件夹下
+1. 将`*.svg` 文件置于 `/react-native-svg-icon/assets/SVG` 文件夹下
 
 ```
 │
