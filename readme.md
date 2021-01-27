@@ -12,7 +12,7 @@ export default class SvgDemo extends Component {
     return (
       <View>
         <Svg icon="story" size={24} color="#444444" style={{}} />
-        <Svg icon={require("./react-native-mix-svg/assets/SVG/ufo.svg")} />
+        <Svg icon={require("./react-native-svg-icon/assets/SVG/story.svg")} />
         <Svg
           icon={{
             uri:
