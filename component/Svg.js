@@ -1,13 +1,13 @@
-import React, {Component} from 'react';
-import {Platform} from 'react-native';
-import PropTypes from 'prop-types';
-import SvgUri from '../lib/react-native-svg-uri/index';
-import svgs from '../assets/svgs';
+import React, { Component } from "react";
+import { Platform } from "react-native";
+import PropTypes from "prop-types";
+import SvgUri from "../lib/react-native-svg-uri/index";
+import svgs from "../assets/svgs";
 
 export default class MixSvg extends Component {
   render() {
-    const {icon, color, size, style} = this.props;
-    if (typeof icon === 'string') {
+    const { icon, color, size, style } = this.props;
+    if (typeof icon === "string") {
       //string，从js文件里读取xml文本
       let svgXmlData = svgs[icon];
       if (!svgXmlData) {
@@ -22,11 +22,11 @@ export default class MixSvg extends Component {
           style={style}
         />
       );
-    } else if (typeof icon === 'object' || typeof icon === 'number') {
+    } else if (typeof icon === "object" || typeof icon === "number") {
       //object，读取uri文件
       //number，读取require文件
-      if (Platform.OS === 'android') {
-        throw new Error('*.svg is only for ios.Please use PropTypes.string');
+      if (Platform.OS === "android") {
+        throw new Error("*.svg is only for ios.Please use PropTypes.string");
       }
       return (
         <SvgUri
@@ -42,7 +42,7 @@ export default class MixSvg extends Component {
 }
 
 MixSvg.defaultProps = {
-  size: 30,
+  size: 24,
 };
 
 /**
