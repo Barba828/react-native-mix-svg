@@ -1,3 +1,3 @@
-import MixSvg from './component/Svg';
+import SvgIcon from "./component/Svg";
 
-export default MixSvg;
+export default SvgIcon;

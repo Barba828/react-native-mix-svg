@@ -1,11 +1,11 @@
-# react-native-mix-svg
+# react-native-svg-icon
 
 ## DEMO
 
 ```js
 import React, { Component } from "react";
 import { View } from "react-native";
-import SvgIcon from "./react-native-mix-svg/";
+import SvgIcon from "./react-native-svg-icon/index";
 
 export default class SvgDemo extends Component {
   render() {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, Button, ScrollView, SafeAreaView } from "react-native";
+import { View, Text, Button, ScrollView } from "react-native";
 import svgs from "../assets/svgs";
 import SvgIcon from "../index";
 export default class SVGDemo extends Component {
